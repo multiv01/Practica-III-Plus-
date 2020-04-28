@@ -1,3 +1,4 @@
+/*Variables principales*/
 local rob = false
 local robbers = {}
 ESX = nil
@@ -6,10 +7,11 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 RegisterServerEvent('esx_hackowanie:tooFar')
 AddEventHandler('esx_hackowanie:tooFar', function(currentStore)
+	/*Iniciar variables*/
 	local _source = source
 	local xPlayers = ESX.GetPlayers()
 	rob = false
-
+	/*Bucle obtener info player*/
 	for i=1, #xPlayers, 1 do
 		local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
 		
