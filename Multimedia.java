@@ -20,10 +20,7 @@ public class Multimedia {
         this.titulo = titulo;
     }
     
-    public void setAutor(String autor){
-        this.autor = autor;
-    }
-    
+  
     public void setFormato(String formato){
         this.formato = formato;
     }
