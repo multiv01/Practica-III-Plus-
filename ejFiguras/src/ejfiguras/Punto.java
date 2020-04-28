@@ -21,11 +21,11 @@ public class Punto{
     public void setPosy(double posy) {
         this.posy = posy;
     }
-
+    //OBTENER POSICIÓN DE X
     public double getPosx() {
         return posx;
     }
-    
+    //OBTENER POSICIÓN DE Y 
     public double getPosy() {
         return posy;
     }
