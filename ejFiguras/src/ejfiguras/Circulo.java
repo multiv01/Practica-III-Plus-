@@ -12,13 +12,13 @@ import java.awt.Color;
  */
 public class Circulo extends Figuras{
     private double radio;
-    
+    //Calcular el área
     public double area(){
         double area=0;
         area = Math.PI * radio * radio;
         return area;
     }
-    
+    //Calcular el perímetro
     public double per(){
         double perimetro=0;
         perimetro = 2 * Math.PI * radio;
