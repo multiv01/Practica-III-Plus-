@@ -1,43 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-package ejmultimedia;
-import java.util.Scanner;
+package herencia1;
+
 /**
  *
- * @author Adrián Torralba Gómez
+ * @author Agustin Taiel Peanelli
  */
-public class Pelicula extends Multimedia {
-    private String actorPrinc;
-    private String actrizPrinc;
+public class Pelicula extends Multimedia{
+
+    private String actorPrin;
+    private String actrizPrin;
+    private static String tipo = "Pelicula";
     
-    public void setActor(String actorPrinc){
-        this.actorPrinc = actorPrinc;
+    public String getTip() {
+        return tipo;
     }
-    
-    public void setActriz(String actrizPrinc){
-        this.actrizPrinc = actrizPrinc;
-    }
-    
     public String getActor(){
-        return actorPrinc;
+        return actorPrin;
     }
-    
     public String getActriz(){
-        return actrizPrinc;
+        return actrizPrin;
     }
     
-    public String toString(){
-        String info = super.toString()+"\nActor Principal: "+actorPrinc+"\nActriz Principal: "+actrizPrinc;
-        return info;
+    public Pelicula(String tit, String aut) {
+        super.setTit(tit);
+        super.setAut(aut);
     }
     
-    public Pelicula(String titulo, String autor, String formato, int duracion, String actorPrinc, String actrizPrinc){
-        super (titulo,autor,formato,duracion);
-        this.actorPrinc = actorPrinc;
-        this.actrizPrinc = actrizPrinc;
+    public Pelicula(String act, int gen){
+        if (gen == 0) {
+            this.actorPrin = act;
+        } else if (gen ==1) {
+            this.actrizPrin = act;
+        }
+        
     }
+    
+    @Override public String toString(){
+        String inf = super.toString()+"\nActor: "+actorPrin+"\nActriz: "+actrizPrin;
+        return inf;   
+    } 
 }
