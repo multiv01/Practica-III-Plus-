@@ -16,6 +16,7 @@ public class Disco extends Multimedia{
         return genero;
     }
     //Imprimir por pantalla
+    @Override //Aquí hay que poner el Override porque es un método de la clase String
     public String toString(){
         String info = super.toString()+"\nGénero: "+genero;
         return info;
