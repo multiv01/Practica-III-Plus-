@@ -15,6 +15,7 @@ public class EjMultimedia {
      * @param args the command line arguments
      */
     
+    //Método pedir Peliculas
     public static String [] pedirPeli(){
         Scanner tec = new Scanner(System.in);
         String tit,aut,form,dur,actor,actriz;
@@ -68,6 +69,7 @@ public class EjMultimedia {
     
     public enum form{wav,mp3,midi,avi,mov,mpg,cdAudio,dvd}
     
+    //Comprobar formato de la película
     public static boolean comprFormato(String formato){
         boolean correcto;
         form wav = form.wav;
@@ -93,6 +95,7 @@ public class EjMultimedia {
         }
     }
     
+    //Programa principal
     public static void main(String[] args) {
         Scanner tec = new Scanner(System.in);
         int tam = 10;
