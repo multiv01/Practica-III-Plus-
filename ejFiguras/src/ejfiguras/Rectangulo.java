@@ -13,13 +13,13 @@ import java.awt.Color;
 public class Rectangulo extends Figuras{
     private double altura;
     private double base;
-    
+    //Calcular área
     public double area(){
         double area=0;
         area = base * altura;
         return area;
     }
-    
+    //Calcular perímetro
     public double per(){
         double perimetro=0;
         perimetro = (base + altura) * 2;
