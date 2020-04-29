@@ -1,74 +1,52 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-package ejmultimedia;
+package herencia1;
 
 /**
  *
- * @author Adrián Torralba Gómez
+ * @author Agustin Taiel Peanelli
  */
 public class Multimedia {
+
     private String titulo;
     private String autor;
     private String formato;
-    private int duracion;
+    private double duracion;
     
-    public void setTitulo(String titulo){
-        this.titulo = titulo;
-    }
-    
-  
-    public void setFormato(String formato){
-        this.formato = formato;
-    }
-    
-    public void setDuracion(int duracion){
-        this.duracion = duracion;
-    }
-    
-    public String getTitulo(){
+    public String getTit() {
         return titulo;
     }
-    
-    public String getAutor(){
+    public void setTit(String aux) {
+        titulo = aux;
+    }
+    public String getAut(){
         return autor;
     }
-    
-    public String getFormato(){
+    public void setAut(String aux) {
+        autor = aux;
+    }
+    public String getForm(){
         return formato;
     }
-    
-    public double getDuracion(){
+    public void setForm(String aux) {
+        formato = aux;
+    }
+    public double getDur(){
         return duracion;
     }
-    @Override
+    public void setDur(double aux) {
+        duracion = aux;
+    }
+ 
     public String toString(){
-        String info = "Título: "+titulo+"\nAutor: "+autor+"\nFormato: "+formato+"\nDuración: "+duracion;
+        String info = "Titulo: "+titulo+"\nAutor: "+autor+"\nFormato: "+formato+"\nDuración: "+duracion;
         return info;
-    }
-    
-    public boolean equals(){
-        boolean iguales = false;
-        if(titulo.equals(autor)){
-            iguales = true;
+    }  
+    public boolean equals(Multimedia obj1, Multimedia obj2){
+        if (obj1.getTit().equals(obj2.getTit()) && obj1.getAut().equals(obj2.getAut())) {
+            return true;
+        } else {
+            return false;
         }
-        return iguales;
-    }
-    
-    public Multimedia(String titulo, String autor, String formato, int duracion){
-        this.titulo = titulo;
-        this.autor = autor;
-        this.formato = formato;
-        this.duracion = duracion;
-    }
-    
-    public Multimedia(){
-        titulo = "";
-        autor = "";
-        formato = "";
-        duracion = 0;
     }
 }
+
