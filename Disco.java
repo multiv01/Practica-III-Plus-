@@ -26,8 +26,9 @@ public class Disco extends Multimedia{
         super (titulo, autor, formato, duracion);
         this.genero = genero;
     }
-    public Disco(String titulo, String autor){
+    public Disco(String titulo, String autor, String formato){
         super(titulo,autor,"---",0);
         genero = "---";
+        super(formato)
     }
 }
